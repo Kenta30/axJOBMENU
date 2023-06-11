@@ -1,17 +1,4 @@
-ESX = exports["es_extended"]:getSharedObject()
-
 useWaypoint = false -- if you want to use waypoint to player, set this to true and uncomment line 48-50
-
-PlayerData = {}
-RegisterNetEvent('esx:playerLoaded')
-AddEventHandler('esx:playerLoaded', function(xPlayer)
-	ESX.PlayerData = xPlayer
-end)
-
-RegisterNetEvent('esx:setJob')
-AddEventHandler('esx:setJob', function(job)
-	ESX.PlayerData.job = job
-end)
 
 function OpenPlayerListMenu()
     ESX.TriggerServerCallback('getJobPlayers', function(players)
