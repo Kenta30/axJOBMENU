@@ -4,7 +4,10 @@ game 'gta5'
 
 author 'ardo'
 
-shared_script 'config.lua'
+shared_scripts {
+  '@es_extended/imports.lua',
+  'config.lua'
+}
 
 client_script 'client.lua'
 
